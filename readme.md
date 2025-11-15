@@ -11,7 +11,7 @@
 [![GitHub Stars](https://img.shields.io/github/stars/sansan0/TrendRadar?style=flat-square&logo=github&color=yellow)](https://github.com/sansan0/TrendRadar/stargazers)
 [![GitHub Forks](https://img.shields.io/github/forks/sansan0/TrendRadar?style=flat-square&logo=github&color=blue)](https://github.com/sansan0/TrendRadar/network/members)
 [![License](https://img.shields.io/badge/license-GPL--3.0-blue.svg?style=flat-square)](LICENSE)
-[![Version](https://img.shields.io/badge/version-v3.0.4-blue.svg)](https://github.com/sansan0/TrendRadar)
+[![Version](https://img.shields.io/badge/version-v3.0.5-blue.svg)](https://github.com/sansan0/TrendRadar)
 [![MCP](https://img.shields.io/badge/MCP-v1.0.1-green.svg)](https://github.com/sansan0/TrendRadar)
 
 [![企业微信通知](https://img.shields.io/badge/企业微信-通知-00D4AA?style=flat-square)](https://work.weixin.qq.com/)
@@ -39,6 +39,7 @@
 | [🎯 核心功能](#-核心功能) | [🚀 快速开始](#-快速开始) | [🐳 Docker部署](#-docker-部署) | [🤖 AI分析专区](#-ai-智能分析部署) |
 |:---:|:---:|:---:|:---:|
 | [📝 更新日志](#-更新日志) | [🔌 MCP客户端](#-mcp-客户端) | [❓ 答疑与常见问题](#问题答疑与1元点赞) | [⭐ 项目相关](#项目相关) |
+| [🔧 自定义监控平台](#自定义监控平台) | [📝 frequency_words.txt 配置](#frequencywordstxt-配置教程) | | |
 
 </div>
 
@@ -47,7 +48,7 @@
 - 感谢**关注[公众号](#问题答疑与1元点赞)** 的读者们，你们的留言、点赞、分享和推荐等积极互动让内容更有温度😎。  
 
 <details>
-<summary>👉 点击查看<strong>致谢名单</strong> (当前 <strong>🔥49🔥</strong> 位)</summary>
+<summary>👉 点击查看<strong>致谢名单</strong> (当前 <strong>🔥62🔥</strong> 位)</summary>
 
 ### 数据支持
 
@@ -67,6 +68,19 @@
 
 |           点赞人            |  金额  |  日期  |             备注             |
 | :-------------------------: | :----: | :----: | :-----------------------: |
+|           **柯          |  1  | 2025.11.14  |     | 
+|           *云          |  88  | 2025.11.13  |    好项目，感谢开源  | 
+|           *W          |  6  | 2025.11.13  |      | 
+|           *凯          |  1  | 2025.11.13  |      | 
+|           对*.          |  1  | 2025.11.13  |    Thanks for your TrendRadar  | 
+|           s*y          |  1  | 2025.11.13  |      | 
+|           **翔          |  10  | 2025.11.13  |   好项目，相见恨晚，感谢开源！     | 
+|           *韦          |  9.9  | 2025.11.13  |   TrendRadar超赞，请老师喝咖啡~     | 
+|           h*p          |  5  | 2025.11.12  |   支持中国开源力量，加油！     | 
+|           c*r          |  6  | 2025.11.12  |        | 
+|           a*n          |  5  | 2025.11.12  |        | 
+|           。*c          |  1  | 2025.11.12  |    感谢开源分享    | 
+|           *记          |  1  | 2025.11.11  |        | 
 |           *主          |  1  | 2025.11.10  |        | 
 |           *了          |  10  | 2025.11.09  |        | 
 |           *杰          |  5  | 2025.11.08  |        | 
@@ -136,7 +150,7 @@
 
 默认监控 11 个主流平台，也可自行增加额外的平台
 
-<details>
+<details id="自定义监控平台">
 <summary><strong>👉 自定义监控平台</strong></summary>
 <br>
 
@@ -192,7 +206,7 @@ platforms:
 
 > 也可以不做筛选，完整的推送所有热点，具体见【历史更新】中的 v2.0.1
 
-<details>
+<details id="frequencywordstxt-配置教程">
 <summary><strong>👉 frequency_words.txt 配置教程</strong></summary>
 <br>
 
@@ -521,6 +535,14 @@ GitHub 一键 Fork 即可使用，无需编程基础。
 - **大版本升级**：从 v1.x 升级到 v2.y, 建议删除现有 fork 后重新 fork，这样更省力且避免配置冲突
 
 
+### 2025/11/12 - v3.0.5
+
+- 修复邮件发送 SSL/TLS 端口配置逻辑错误
+- 优化邮箱服务商（QQ/163/126）默认使用 465 端口（SSL）
+- **新增 Docker 环境变量支持**：核心配置项（`enable_crawler`、`report_mode`、`push_window` 等）支持通过环境变量覆盖，解决 NAS 用户修改配置文件不生效的问题（详见 [🐳 Docker 部署](#-docker-部署) 章节）
+
+
+
 ### 2025/10/26 - mcp-v1.0.1
 
   **MCP 模块更新:**
@@ -528,13 +550,14 @@ GitHub 一键 Fork 即可使用，无需编程基础。
   - 统一所有工具的时间参数格式
 
 
+<details>
+<summary><strong>👉 历史更新</strong></summary>
+
+
 ### 2025/10/31 - v3.0.4
 
 - 解决飞书因推送内容过长而产生的错误，实现了分批推送
 
-
-<details>
-<summary><strong>👉 历史更新</strong></summary>
 
 ### 2025/10/23 - v3.0.3
 
@@ -1231,6 +1254,28 @@ docker run -d --name trend-radar \
    - `config/frequency_words.txt` - 关键词配置（设置你关心的热点词汇）
    - `.env` - 环境变量配置（webhook URLs 和定时任务）
 
+   **⚙️ 环境变量覆盖机制（v3.0.5+）**
+
+   如果你在 NAS 或其他 Docker 环境中遇到**修改 `config.yaml` 后配置不生效**的问题，可以通过环境变量直接覆盖配置：
+
+   | 环境变量 | 对应配置 | 示例值 | 说明 |
+   |---------|---------|-------|------|
+   | `ENABLE_CRAWLER` | `crawler.enable_crawler` | `true` / `false` | 是否启用爬虫 |
+   | `ENABLE_NOTIFICATION` | `notification.enable_notification` | `true` / `false` | 是否启用通知 |
+   | `REPORT_MODE` | `report.mode` | `daily` / `incremental` / `current`| 报告模式 |
+   | `PUSH_WINDOW_ENABLED` | `notification.push_window.enabled` | `true` / `false` | 推送时间窗口开关 |
+   | `PUSH_WINDOW_START` | `notification.push_window.time_range.start` | `08:00` | 推送开始时间 |
+   | `PUSH_WINDOW_END` | `notification.push_window.time_range.end` | `22:00` | 推送结束时间 |
+   | `FEISHU_WEBHOOK_URL` | `notification.webhooks.feishu_url` | `https://...` | 飞书 Webhook |
+
+   **配置优先级**：环境变量 > config.yaml
+
+   **使用方法**：
+   - 修改 `.env` 文件，取消注释并填写需要的配置
+   - 或在 NAS/群晖 Docker 管理界面的"环境变量"中直接添加
+   - 重启容器后生效：`docker-compose restart`
+
+
 3. **启动服务**:
    ```bash
    # 拉取最新镜像并启动
@@ -1408,7 +1453,7 @@ TrendRadar MCP 服务支持标准的 Model Context Protocol (MCP) 协议，可�
 <details>
 <summary><b>👉 Cursor</b></summary>
 
-#### 方式一：HTTP 模式（推荐）
+#### 方式一：HTTP 模式
 
 1. **启动 HTTP 服务**：
    ```bash
@@ -1442,7 +1487,7 @@ TrendRadar MCP 服务支持标准的 Model Context Protocol (MCP) 协议，可�
    - 在聊天界面的 "Available Tools" 中查看已连接的工具
    - 开始使用：`搜索今天的"AI"相关新闻`
 
-#### 方式二：STDIO 模式
+#### 方式二：STDIO 模式（推荐）
 
 创建 `.cursor/mcp.json`：
 ```json
@@ -1472,7 +1517,7 @@ TrendRadar MCP 服务支持标准的 Model Context Protocol (MCP) 协议，可�
 
 在 Cline 的 MCP 设置中添加：
 
-**HTTP 模式**（推荐）：
+**HTTP 模式**：
 ```json
 {
   "trendradar": {
@@ -1484,7 +1529,7 @@ TrendRadar MCP 服务支持标准的 Model Context Protocol (MCP) 协议，可�
 }
 ```
 
-**STDIO 模式**：
+**STDIO 模式**（推荐）：
 ```json
 {
   "trendradar": {
@@ -1609,7 +1654,7 @@ MCP Inspector 是官方调试工具，用于测试 MCP 连接：
 
 任何支持 Model Context Protocol 的客户端都可以连接 TrendRadar：
 
-#### HTTP 模式（推荐）
+#### HTTP 模式
 
 **服务地址**：`http://localhost:3333/mcp`
 
@@ -1623,7 +1668,7 @@ MCP Inspector 是官方调试工具，用于测试 MCP 连接：
 }
 ```
 
-#### STDIO 模式
+#### STDIO 模式（推荐）
 
 **基本配置模板**：
 ```json
@@ -1653,7 +1698,6 @@ MCP Inspector 是官方调试工具，用于测试 MCP 连接：
 ## ☕问题答疑与1元点赞
 
 > 心意到就行，收到的**点赞**用于提高开发者开源的积极性。**点赞**已收录于**致谢名单**  
-> 我发现大家都很善于靠自己解决问题，这种尝试值得鼓励，但如果被问题卡住太久，建议提问或者留言。这样我既能帮到**你**，也能帮到**更多探索中的小伙伴**~~
 
 - **GitHub Issues**：适合针对性强的解答。提问时请提供完整信息（截图、错误日志、系统环境等）。
 - **公众号交流**：适合快速咨询。建议优先在相关文章下的公共留言区交流，如私信，请文明礼貌用语😉
